@@ -16,14 +16,14 @@ public class Produto {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 	private String titulo;
 	private String descricao;
 	private int paginas;
 	@DateTimeFormat
 	private Calendar dataLancamento;
 
-	@ElementCollection // cria uma tabela de preço relacionado ao produto
+	@ElementCollection() // cria uma tabela de preço relacionado ao produto
 	private List<Preco> precos;
 
 	private String sumarioPath;
@@ -52,10 +52,10 @@ public class Produto {
 		this.paginas = paginas;
 	}
 
-	@Override
-	public String toString() {
-		return "Produto [titulo=" + titulo + ", descricao=" + descricao + ", paginas=" + paginas + "]";
-	}
+	/*
+	 * @Override public String toString() { return "Produto [titulo=" + titulo +
+	 * ", descricao=" + descricao + ", paginas=" + paginas + "]"; }
+	 */
 
 	public List<Preco> getPrecos() {
 		return precos;
