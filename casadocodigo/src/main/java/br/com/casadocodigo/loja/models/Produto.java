@@ -26,6 +26,8 @@ public class Produto {
 	@ElementCollection // cria uma tabela de preço relacionado ao produto
 	private List<Preco> precos;
 
+	private String sumarioPath;
+
 	public String getTitulo() {
 		return titulo;
 	}
@@ -77,6 +79,14 @@ public class Produto {
 
 	public void setDataLancamento(Calendar dataLancamento) {
 		this.dataLancamento = dataLancamento;
+	}
+
+	public String getSumarioPath() {
+		return sumarioPath;
+	}
+
+	public void setSumarioPath(String sumarioPath) {
+		this.sumarioPath = sumarioPath;
 	}
 
 }
