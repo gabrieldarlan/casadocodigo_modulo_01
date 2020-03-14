@@ -17,7 +17,7 @@ public class ProdutoDao {
 	@PersistenceContext
 	private EntityManager manager;
 
-	public void gravar(Produto produto) {
+	public void grava(Produto produto) {
 		manager.persist(produto);
 	}
 
