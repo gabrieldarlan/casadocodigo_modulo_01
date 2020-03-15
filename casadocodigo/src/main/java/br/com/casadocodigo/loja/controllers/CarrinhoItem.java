@@ -1,18 +1,19 @@
 package br.com.casadocodigo.loja.controllers;
 
+import java.math.BigDecimal;
+
 import br.com.casadocodigo.loja.models.Produto;
 import br.com.casadocodigo.loja.models.TipoPreco;
 
 public class CarrinhoItem {
-	
+
 	private TipoPreco tipoPreco;
 	private Produto produto;
-	
+
 	public CarrinhoItem(Produto produto, TipoPreco tipoPreco) {
 		this.produto = produto;
 		this.tipoPreco = tipoPreco;
 	}
-
 
 	public Produto getProduto() {
 		return produto;
@@ -30,6 +31,9 @@ public class CarrinhoItem {
 		this.tipoPreco = tipoPreco;
 	}
 
+	public BigDecimal getPreco() {
+		return produto.precoPara(tipoPreco);
+	}
 
 	@Override
 	public int hashCode() {
@@ -39,7 +43,6 @@ public class CarrinhoItem {
 		result = prime * result + ((tipoPreco == null) ? 0 : tipoPreco.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -59,7 +62,9 @@ public class CarrinhoItem {
 			return false;
 		return true;
 	}
-	
-	
+
+	public BigDecimal getTotal(int quantidade) {
+		return this.getPreco().multiply(new BigDecimal(quantidade));
+	}
 
 }
