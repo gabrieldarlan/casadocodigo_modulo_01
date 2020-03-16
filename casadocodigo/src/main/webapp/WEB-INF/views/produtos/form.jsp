@@ -9,6 +9,11 @@
 <meta charset="UTF-8">
 <title>Livro de Javam Android, iPhone, Ruby, PHP e muito mais -
 	CDC</title>
+	
+<c:url value="/resources/css" var="cssPath"/>
+<link rel="stylesheet" href="${cssPath }/bootstrap.min.css">
+<link rel="stylesheet" href="${cssPath }/bootstrap-theme.min.css">
+
 </head>
 <body>
 	<form:form action="${s:mvcUrl('PC#grava').build()}" method="POST"
