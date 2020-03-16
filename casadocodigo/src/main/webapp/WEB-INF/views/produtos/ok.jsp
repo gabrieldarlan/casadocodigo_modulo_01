@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Livro de Javam Android, iPhone, Ruby, PHP e muito mais -
+<title>Livro de Java Android, iPhone, Ruby, PHP e muito mais -
 	CDC</title>
 </head>
 <body>
